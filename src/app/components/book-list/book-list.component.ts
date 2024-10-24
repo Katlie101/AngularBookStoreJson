@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Book, BooksService } from '../../service/books.service';
 import { log } from 'console';
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-book-list',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgClass],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'
 })
@@ -21,6 +21,11 @@ export class BookListComponent {
     console.log(this.books);
 
    } )
+  }
+
+  goToDetails(book:Book) {
+    console.log(book)
+
   }
 
 }

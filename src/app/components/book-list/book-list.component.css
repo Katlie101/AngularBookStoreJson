@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    background-color: beige;
+    overflow-y: auto;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 26px;
+    margin: 10px;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.book-card {
+    border: 1px solid yellow;
+    height: auto;
+    width: 200px;
+    background-color: chocolate;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 5px 5px 5px 0 rgb (205, 205, 205);
+
+}
+
+.book-card img {
+    width: auto;
+    height: 150px;
+    object-fit: contain;
+
+}
+
+.book-card.no-image {
+    background-color: coral;
+}

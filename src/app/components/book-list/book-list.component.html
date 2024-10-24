@@ -1,7 +1,15 @@
 <div class="container">
     <div class="book-list">
-        <div *ngFor="let book of books">
-            
+        <div
+        class="book-card"
+        *ngFor="let book of books"
+        [ngClass]="{'no-image' : !book.thumbnailUrl}"
+        (click)="goToDetails(book)">
+
+        
+           <img [src]="book.thumbnailUrl"/>
+           <p>{{book.title}}</p> 
+           <P style="color: darkblue; font-size: 0.8em;"> <strong>Authors</strong> {{book.authors.join(',')}}</P>
         </div>
     </div>
 </div>

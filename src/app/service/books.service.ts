@@ -11,7 +11,7 @@ export interface Book {
   shortDescription:string;
   longDescription:string;
   status:string;
-  author:string[];
+  authors:string[];
   categories:string[];
 
 }
