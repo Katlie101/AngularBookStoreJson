@@ -1,1 +1,21 @@
-<p>book-details works!</p>
+<div class="container">
+    <div *ngIf="book" class="book-detail">
+        <button>Back</button>
+
+        <h2>{{book.title}}</h2>
+        <div>
+            <img [src]="book.thumbnailUrl"/>
+            <div>
+                <p><strong>ISBN</strong> {{book.isbn}}</p>
+                <p><strong>Authors</strong> {{book.authors.join(',')}}</p>
+                <p><strong>Categories</strong> {{book.categories.join(',')}}</p>
+                <p><strong>Page Count</strong> {{book.pageCount}}</p>
+                <p><strong>Published Date</strong> {{book.publishedDate.$date}}</p>
+                <p><strong>Status</strong> {{book.status}}</p>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

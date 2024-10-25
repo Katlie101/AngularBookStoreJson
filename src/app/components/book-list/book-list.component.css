@@ -16,14 +16,21 @@
 }
 
 .book-card {
-    border: 1px solid yellow;
+   /* border: 1px solid yellow;*/
     height: auto;
     width: 200px;
     background-color: chocolate;
     border-radius: 10px;
     align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
     box-shadow: 5px 5px 5px 0 rgb (205, 205, 205);
 
+}
+
+.book-card:hover {
+    background-color: burlywood;
 }
 
 .book-card img {
@@ -33,6 +40,3 @@
 
 }
 
-.book-card.no-image {
-    background-color: coral;
-}

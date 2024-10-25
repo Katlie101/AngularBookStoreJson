@@ -10,9 +10,11 @@ export interface Book {
   thumbnailUrl:string;
   shortDescription:string;
   longDescription:string;
+  pageCount:number;
   status:string;
   authors:string[];
   categories:string[];
+  
 
 }
 
