@@ -1,20 +1,26 @@
 <div class="container">
     <div *ngIf="book" class="book-detail">
-        <button>Back</button>
+        <button (click)="goBackToList()">Back</button>
 
         <h2>{{book.title}}</h2>
-        <div>
+        <div style="display: flex;">
             <img [src]="book.thumbnailUrl"/>
             <div>
                 <p><strong>ISBN</strong> {{book.isbn}}</p>
                 <p><strong>Authors</strong> {{book.authors.join(',')}}</p>
                 <p><strong>Categories</strong> {{book.categories.join(',')}}</p>
                 <p><strong>Page Count</strong> {{book.pageCount}}</p>
-                <p><strong>Published Date</strong> {{book.publishedDate.$date}}</p>
+                <p><strong>Published Date</strong> {{book.publishedDate.$date | date}}</p>
                 <p><strong>Status</strong> {{book.status}}</p>
+                <p>{{30 | currency }}</p>
 
             </div>
+          
         </div>
+        <p style="font-weight: bold;">Description</p>
+        <span style="font-weight: 200; font-size: 0.7em;">
+            {{book.longDescription}}
+        </span>
 
     </div>
 
